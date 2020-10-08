@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    primary:
+      url: jdbc:mysql://localhost:3333/ironman
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    secondary:
+      url: jdbc:sqlserver://localhost:3334
+      databaseName: ironman
+      username: sa
+      password: SqlServer123!@#
+      driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver

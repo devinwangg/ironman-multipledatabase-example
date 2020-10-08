@@ -1,0 +1,23 @@
+version: '3'
+services:
+  # MySQL 配置
+  ironman_mysql:
+    container_name: ironman_mysql
+    image: mysql
+    ports:
+      - 3333:3306
+    command:
+      --port 3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+
+  # SQL Server 配置
+  ironman_mssql:
+    container_name: ironman_mssql
+    image: microsoft/mssql-server-linux:2017-latest
+    ports:
+      - 3334:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=SqlServer123!@#
+      - MSSQL_PID=Developer
